@@ -1,9 +1,9 @@
-  import 'package:agrotrustapp/profile.dart';
+import 'package:agrotrustapp/profile.dart';
+import 'package:agrotrustapp/search.dart';
 import 'package:flutter/material.dart';
 //import 'screens/splash.dart';
 //import 'screens/login.dart';
 //import 'screens/home_screen.dart';
-//import 'screens/search.dart';
 //import 'screens/product.dart';
 //import 'screens/cart.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   final Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
     //'/login': (BuildContext context) => const LoginScreen(),
     //'/home': (BuildContext context) => const HomeScreen(),
-    //'/search': (BuildContext context) => const SearchScreen(),
+    '/search': (BuildContext context) => const SearchScreen(),
     //'/product': (BuildContext context) => const ProductScreen(),
     '/profile': (BuildContext context) => const ProfileScreen(),
     //'/cart': (BuildContext context) => const CartScreen(),
