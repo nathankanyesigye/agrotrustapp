@@ -1,10 +1,10 @@
-  import 'package:flutter/material.dart';
+  import 'package:agrotrustapp/profile.dart';
+import 'package:flutter/material.dart';
 //import 'screens/splash.dart';
 //import 'screens/login.dart';
 //import 'screens/home_screen.dart';
 //import 'screens/search.dart';
 //import 'screens/product.dart';
-//import 'screens/profile.dart';
 //import 'screens/cart.dart';
 
 void main() => runApp(MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     //'/home': (BuildContext context) => const HomeScreen(),
     //'/search': (BuildContext context) => const SearchScreen(),
     //'/product': (BuildContext context) => const ProductScreen(),
-    //'/profile': (BuildContext context) => const ShopScreen(),
+    '/profile': (BuildContext context) => const ProfileScreen(),
     //'/cart': (BuildContext context) => const CartScreen(),
   };
 
