@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     //'/home': (BuildContext context) => const HomeScreen(),
     '/search': (BuildContext context) => const SearchScreen(),
     //'/product': (BuildContext context) => const ProductScreen(),
-    '/profile': (BuildContext context) => const ProfileScreen(),
+    '/profile': (BuildContext context) => ProfileScreen(),
     //'/cart': (BuildContext context) => const CartScreen(),
   };
 

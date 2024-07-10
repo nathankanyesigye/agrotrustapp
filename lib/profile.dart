@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,11 +13,11 @@ class ProfileScreen extends StatelessWidget {
           children: <Widget>[
             CircleAvatar(
               radius: 50,
-              backgroundImage: AssetImage('assets/sherman.jpg'), // Replace with actual image path
+              backgroundImage: AssetImage('assets/profile_picture.jpg'), // Replace with your profile picture
             ),
             SizedBox(height: 20),
             Text(
-              'WAMALA ABDUL', // Replace with actual user name
+              'Group 36', // Replace with actual user's name
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -27,26 +25,37 @@ class ProfileScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'wamala@gmail.com', // Replace with actual email
+              'Software Engineer', // Replace with actual user's role
               style: TextStyle(
-                fontSize: 16,
-                color: Colors.grey,
+                fontSize: 18,
+                color: Colors.grey[600],
+              ),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'About Me:',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Text(
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sit amet velit convallis, quis tristique ligula facilisis.', // Replace with actual user's bio
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 16,
+                ),
               ),
             ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Implement edit profile functionality
+                // Implement logout functionality
+                Navigator.pop(context); // Close profile screen
               },
-              child: Text('Edit Profile'),
-            ),
-            SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {
-                // Implement sign out functionality
-                Navigator.pushReplacementNamed(context, '/login');
-              },
-              child: Text('Sign Out'),
+              child: Text('Logout'),
             ),
           ],
         ),
