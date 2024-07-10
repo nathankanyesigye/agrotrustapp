@@ -3,7 +3,7 @@ import 'package:agrotrustapp/search.dart';
 import 'package:flutter/material.dart';
 //import 'screens/splash.dart';
 //import 'screens/login.dart';
-//import 'screens/home_screen.dart';
+
 //import 'screens/product.dart';
 //import 'screens/cart.dart';
 
