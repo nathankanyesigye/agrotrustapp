@@ -112,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'Hello, User!',
+                    'Hello, group32',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 22,
@@ -120,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   Text(
-                    'user@example.com',
+                    'group32@example.com',
                     style: TextStyle(
                       color: Colors.white70,
                       fontSize: 16,
