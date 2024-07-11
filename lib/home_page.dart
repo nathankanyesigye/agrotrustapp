@@ -180,28 +180,32 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                    trailing: Wrap(
-                      spacing: 5,
-                      children: <Widget>[
-                        ElevatedButton(
-                          onPressed: () {
-                            _handleShopAction(context, index);
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.orange,
+                    trailing: SizedBox(
+                      width: 200, // Adjust as needed to prevent overflow
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: <Widget>[
+                          ElevatedButton(
+                            onPressed: () {
+                              _handleShopAction(context, index);
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.orange,
+                            ),
+                            child: const Text('Shop House'),
                           ),
-                          child: const Text('Shop House'),
-                        ),
-                        ElevatedButton(
-                          onPressed: () {
-                            _handleSendMessage(context, index);
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue,
+                          const SizedBox(width: 5), // Space between buttons
+                          ElevatedButton(
+                            onPressed: () {
+                              _handleSendMessage(context, index);
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue,
+                            ),
+                            child: const Text('Send Message'),
                           ),
-                          child: const Text('Send Message'),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 );

@@ -111,7 +111,7 @@
     },
     {
       "name": "google_maps_flutter_ios",
-      "rootUri": "file:///C:/Users/MINEMI/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_ios-2.9.0",
+      "rootUri": "file:///C:/Users/MINEMI/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_ios-2.10.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -261,9 +261,9 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///C:/Users/MINEMI/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.2",
+      "rootUri": "file:///C:/Users/MINEMI/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.3",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.4"
     },
     {
       "name": "typed_data",
@@ -296,10 +296,10 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-07-10T06:18:03.376186Z",
+  "generated": "2024-07-11T10:41:56.429974Z",
   "generator": "pub",
-  "generatorVersion": "3.5.0-323.0.dev",
+  "generatorVersion": "3.6.0-22.0.dev",
   "flutterRoot": "file:///C:/src/flutter",
-  "flutterVersion": "3.24.0-1.0.pre.54",
+  "flutterVersion": "3.24.0-1.0.pre.72",
   "pubCache": "file:///C:/Users/MINEMI/AppData/Local/Pub/Cache"
 }
