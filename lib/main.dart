@@ -1,3 +1,4 @@
+import 'package:agrotrustapp/favourite.dart';
 import 'package:agrotrustapp/home_page.dart';
 import 'package:agrotrustapp/profile.dart';
 import 'package:agrotrustapp/search.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
     //'/product': (BuildContext context) => const ProductScreen(),
     '/profile': (BuildContext context) => ProfileScreen(),
     //'/cart': (BuildContext context) => const CartScreen(),
+    '/favourites': (BuildContext context) => const FavoritesScreen(),
   };
 
    MyApp({super.key});
