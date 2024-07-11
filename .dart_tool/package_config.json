@@ -296,10 +296,10 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-07-11T10:42:19.677368Z",
+  "generated": "2024-07-11T12:41:18.943305Z",
   "generator": "pub",
-  "generatorVersion": "3.6.0-22.0.dev",
+  "generatorVersion": "3.6.0-26.0.dev",
   "flutterRoot": "file:///C:/src/flutter",
-  "flutterVersion": "3.24.0-1.0.pre.72",
+  "flutterVersion": "3.24.0-1.0.pre.79",
   "pubCache": "file:///C:/Users/MINEMI/AppData/Local/Pub/Cache"
 }

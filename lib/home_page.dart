@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -7,7 +7,6 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _HomeScreenState createState() => _HomeScreenState();
 }
 
@@ -17,20 +16,16 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Marker> markers = [];
 
   void _handleShopAction(BuildContext context, int index) {
-    // Replace with your actual shop logic, e.g., navigate to shop screen
     if (kDebugMode) {
       print('Shop button pressed for index $index');
     }
-    // Example: navigate to shop screen
-    Navigator.pushNamed(context, '/shop'); // Replace '/shop' with your shop route
+    Navigator.pushNamed(context, '/shop');
   }
 
   void _handleSendMessage(BuildContext context, int index) {
-    // Replace with your actual send message logic
     if (kDebugMode) {
       print('Send message button pressed for index $index');
     }
-    // Example: show dialog or navigate to message screen
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -51,33 +46,27 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _handleSearch() {
-    // Replace with your actual search action
     if (kDebugMode) {
       print('Search button pressed');
     }
-    // Example: navigate to search screen or perform search functionality
-    Navigator.pushNamed(context, '/search'); // Replace '/search' with your search route
+    Navigator.pushNamed(context, '/search');
   }
 
   void _navigateToPage(int index) {
-    // Handle navigation to different pages based on index
     switch (index) {
       case 0:
-        // Navigate to home screen (already on home screen)
         break;
       case 1:
-        // Replace with your actual favorites screen navigation logic
         if (kDebugMode) {
           print('Navigate to Favorites');
         }
-        Navigator.pushNamed(context, '/favorites'); // Replace '/favorites' with your favorites route
+        Navigator.pushNamed(context, '/favorites');
         break;
       case 2:
-        // Replace with your actual profile screen navigation logic
         if (kDebugMode) {
           print('Navigate to Profile');
         }
-        Navigator.pushNamed(context, '/profile'); // Replace '/profile' with your profile route
+        Navigator.pushNamed(context, '/profile');
         break;
     }
   }
@@ -115,18 +104,16 @@ class _HomeScreenState extends State<HomeScreen> {
               leading: const Icon(Icons.settings),
               title: const Text('Settings'),
               onTap: () {
-                // Implement settings navigation
-                Navigator.pop(context); // Close the drawer
-                Navigator.pushNamed(context, '/settings'); // Replace '/settings' with your settings route
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/settings');
               },
             ),
             ListTile(
               leading: const Icon(Icons.help),
               title: const Text('Help'),
               onTap: () {
-                // Implement help navigation
-                Navigator.pop(context); // Close the drawer
-                Navigator.pushNamed(context, '/help'); // Replace '/help' with your help route
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/help');
               },
             ),
           ],
@@ -134,16 +121,20 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: <Widget>[
-          const Expanded(
-            // Replace with GoogleMap widget once implemented
-            child: Placeholder(),
+          Expanded(
+            child: GoogleMap(
+              initialCameraPosition: CameraPosition(
+                target: LatLng(0, 0), // Provide an initial location
+                zoom: 10, // Set the zoom level
+              ),
+              markers: Set<Marker>.of(markers),
+            ),
           ),
           Expanded(
             flex: 2,
             child: ListView.builder(
               itemCount: markers.length,
               itemBuilder: (BuildContext context, int index) {
-                // Replace with actual asset paths
                 String assetPath = 'assets/sherman.jpg';
                 Color vegetationColor = Colors.green.shade200;
 
@@ -156,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     leading: CircleAvatar(
                       backgroundImage: AssetImage(assetPath),
                       backgroundColor: vegetationColor,
-                      radius: 30, // Adjust as needed
+                      radius: 30,
                     ),
                     title: const Text(
                       'Seller Name',
@@ -180,32 +171,28 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                    trailing: SizedBox(
-                      width: 200, // Adjust as needed to prevent overflow
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          ElevatedButton(
-                            onPressed: () {
-                              _handleShopAction(context, index);
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.orange,
-                            ),
-                            child: const Text('Shop House'),
+                    trailing: Wrap(
+                      spacing: 5,
+                      children: <Widget>[
+                        ElevatedButton(
+                          onPressed: () {
+                            _handleShopAction(context, index);
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.orange,
                           ),
-                          const SizedBox(width: 5), // Space between buttons
-                          ElevatedButton(
-                            onPressed: () {
-                              _handleSendMessage(context, index);
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue,
-                            ),
-                            child: const Text('Send Message'),
+                          child: const Text('Shop House'),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                            _handleSendMessage(context, index);
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue,
                           ),
-                        ],
-                      ),
+                          child: const Text('Send Message'),
+                        ),
+                      ],
                     ),
                   ),
                 );
@@ -230,7 +217,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
         onTap: (int index) {
-          // Handle navigation to different pages based on index
           _navigateToPage(index);
         },
       ),
