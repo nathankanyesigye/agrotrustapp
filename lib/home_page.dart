@@ -135,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: ListView.builder(
               itemCount: markers.length,
               itemBuilder: (BuildContext context, int index) {
-                String assetPath = 'assets/sherman.jpg';
+                String assetPath = 'assets/agrochemical.jpg';
                 Color vegetationColor = Colors.green.shade200;
 
                 return Card(
